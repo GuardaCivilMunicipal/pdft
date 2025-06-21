@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Converter HTML para PDF</title>
+</head>
+<body>
+  <div id="content">
+    <h1>Título do Conteúdo</h1>
+    <p>Este é um exemplo de conteúdo que será convertido para PDF.</p>
+  </div>
+  <button onclick="gerarPDF()">Gerar PDF</button>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F0PuHxmT/нта/uEyzfySh1kOF6BljIEY15JrqsDdIFL3N6I9U9aW41gL6UqJoazEq8/YigIIfV7A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script>
+    function gerarPDF() {
+      const element = document.getElementById('content');
+      html2pdf().from(element).save('meu_documento.pdf');
+    }
+  </script>
+</body>
+</html>
